@@ -1,0 +1,106 @@
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #F1EAFE, #FFF9F1);
+  padding: 20px;
+}
+
+.login-card {
+  background-color: white;
+  width: 100%;
+  max-width: 420px;
+  padding: 40px 30px;
+  border-radius: 22px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-card h1 {
+  color: #7957D5;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.login-card h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.login-card p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.login-card label {
+  color: #444;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.login-card input {
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.login-card button {
+  background-color: #7957D5;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-card button:hover {
+  background-color: #FF8566;
+}
+
+.login-card .signup-text {
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+
+.signup-text a {
+  color: #7957D5;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.score-display {
+  background: #F1EAFE;
+  border: 2px solid #7957D5;
+  border-radius: 18px;
+  padding: 25px;
+  margin: 25px 0;
+}
+
+.score-display p {
+  color: #7957D5;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.score-display h2 {
+  color: #7957D5;
+  font-size: 45px;
+  margin: 10px 0;
+}
+
+.score-display span {
+  color: #FF8566;
+  font-weight: bold;
+}

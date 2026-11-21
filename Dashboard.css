@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+}
+
+.dashboard-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f4f0ff, #eaf5ff, #fdf2ff);
+  padding-bottom: 50px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #202044;
+}
+
+/* NAVIGATION */
+
+.dashboard-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px 6%;
+  box-shadow: 0 5px 25px rgba(45, 35, 100, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(12px);
+}
+
+.dashboard-nav h2 {
+  color: #6044c8;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.dashboard-nav button {
+  background: linear-gradient(135deg, #7555e8, #4c78e8);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.dashboard-nav button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(96, 68, 200, 0.3);
+}
+
+/* WELCOME */
+
+.welcome-section {
+  text-align: center;
+  padding: 75px 20px 55px;
+  background: linear-gradient(120deg, #30236f, #5142b5, #2876c9);
+  color: white;
+  border-radius: 0 0 45px 45px;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-section h1 {
+  color: white;
+  font-size: clamp(28px, 4vw, 42px);
+  margin: 0;
+  font-weight: 800;
+}
+
+.welcome-section p {
+  color: #e5e4ff;
+  margin-top: 18px;
+  font-size: 16px;
+}
+
+.welcome-section::after {
+  content: '✈️';
+  position: absolute;
+  right: 10%;
+  top: 25px;
+  font-size: 55px;
+  opacity: 0.6;
+  transform: rotate(-15deg);
+}
+
+/* DAILY QUEST BUTTON */
+
+.dashboard-page > button {
+  display: block;
+  margin: 30px auto;
+  background: linear-gradient(135deg, #ff9b71, #ff6485);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 100, 133, 0.2);
+  transition: 0.3s;
+}
+
+.dashboard-page > button:hover {
+  transform: translateY(-4px);
+}
+
+/* LANGUAGE SECTION */
+
+.learning-section {
+  padding: 45px 6%;
+  text-align: center;
+}
+
+.learning-section h2,
+.progress-section h2 {
+  color: #44318e;
+  font-size: 29px;
+  margin-bottom: 35px;
+  font-weight: 800;
+}
+
+.learning-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.learning-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 35px 20px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 30px rgba(55, 43, 120, 0.08);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.learning-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 35px rgba(85, 64, 180, 0.16);
+}
+
+.learning-card span {
+  font-size: 52px;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.learning-card:hover span {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.learning-card h3 {
+  color: #5540ad;
+  margin: 18px 0 10px;
+  font-size: 21px;
+}
+
+.learning-card p {
+  color: #77758d;
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 42px;
+  margin-bottom: 22px;
+}
+
+.learning-card button {
+  background: linear-gradient(135deg, #7655e8, #4589e8);
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.learning-card button:hover {
+  background: linear-gradient(135deg, #ff8b77, #ff5f91);
+  transform: scale(1.05);
+}
+
+/* PROGRESS */
+
+.progress-section {
+  margin-top: 30px;
+  padding: 55px 30px;
+  text-align: center;
+  background: linear-gradient(135deg, #e9e3ff, #e1f0ff);
+  border-radius: 40px 40px 0 0;
+}
+
+.progress-card {
+  display: inline-block;
+  background: white;
+  min-width: 190px;
+  padding: 30px 35px;
+  margin: 12px;
+  border-radius: 23px;
+  box-shadow: 0 8px 25px rgba(70, 50, 150, 0.08);
+  transition: 0.3s;
+}
+
+.progress-card:hover {
+  transform: translateY(-6px);
+}
+
+.progress-card h3 {
+  color: #6549ca;
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.progress-card p {
+  color: #77758d;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .learning-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-nav {
+    padding: 16px 20px;
+  }
+
+  .dashboard-nav h2 {
+    font-size: 20px;
+  }
+
+  .welcome-section {
+    padding: 60px 20px;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .welcome-section::after {
+    display: none;
+  }
+
+  .learning-section {
+    padding: 35px 18px;
+  }
+
+  .learning-section h2,
+  .progress-section h2 {
+    font-size: 24px;
+  }
+
+  .learning-container {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-section {
+    padding: 35px 15px;
+  }
+
+  .progress-card {
+    width: 85%;
+  }
+}
